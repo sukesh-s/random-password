@@ -1,0 +1,19 @@
+{
+  "name": "random-pwd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "types": "./bundle.d.ts",
+  "exports": {
+    ".": {
+      "require": "./bundle.js",
+      "import": "./bundle.mjs",
+      "types": "./bundle.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

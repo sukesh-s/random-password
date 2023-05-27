@@ -1,0 +1,17 @@
+{
+  "name": "pwdgen",
+  "version": "1.0.0",
+  "description": "Random password generator",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Random",
+    "password",
+    "generator"
+  ],
+  "author": "Sukesh-s",
+  "license": "MIT"
+}

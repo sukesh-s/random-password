@@ -1,19 +1,30 @@
 {
-  "name": "random-pwd",
-  "version": "1.0.0",
-  "description": "",
-  "main": "bundle.js",
-  "types": "./bundle.d.ts",
-  "exports": {
-    ".": {
-      "require": "./bundle.js",
-      "import": "./bundle.mjs",
-      "types": "./bundle.d.ts"
-    }
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "MIT"
+	"name": "@sukesh/random-password-generator",
+	"version": "2.0.0",
+	"description": "Random password generator",
+	"keywords": [
+		"Random password",
+		"Password generator"
+	],
+	"main": "bundle.js",
+	"types": "./bundle.d.ts",
+	"exports": {
+		".": {
+			"require": "./bundle.js",
+			"import": "./bundle.mjs",
+			"types": "./bundle.d.ts"
+		}
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": {
+		"name": "Sukesh",
+		"email": "hello2sukesh@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sukesh-s/random-password.git"
+	},
+	"license": "MIT"
 }

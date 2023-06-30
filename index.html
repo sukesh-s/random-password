@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+		<title>Random Password</title>
+	</head>
+	<body>
+		<h1>Random Password</h1>
+		<div class="container-password">
+			<div class="content-container" id="random-password"></div>
+			<div class="content-copy">
+				<span class="material-symbols-outlined copy-icon" id="copy-password" role="button"> content_copy </span>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="range-container">
+				<div class="count-container">
+					<span class="range-count" id="range-count"></span>
+					<span class="range-label" id="count-info"></span>
+				</div>
+				<input id="rangeCount" type="range" max="50" min="1" />
+			</div>
+			<div class="checkbox-container">
+				<div><input type="checkbox" id="numbers" name="numbers" /><label>Numbers</label></div>
+				<div><input type="checkbox" id="lowerChar" name="lowerChar" /><label>Lowercase letters</label></div>
+				<div><input type="checkbox" id="upperChar" name="upperChar" /><label>Uppercase letters</label></div>
+				<div><input type="checkbox" id="specialChar" name="specialChar" /><label>Special Character</label></div>
+			</div>
+		</div>
+		<div class="source">
+			<a href="https://github.com/sukesh-s/random-password" target="_blank">
+				<span class="material-symbols-outlined code-icon"> code </span>
+			</a>
+		</div>
+		<script src="index.js" type="module"></script>
+	</body>
+</html>

@@ -14,6 +14,7 @@ const countLabel = document.getElementById('range-count');
 const countInfo = document.getElementById('count-info');
 const _password = document.getElementById('random-password');
 const copyIcon = document.getElementById('copy-password');
+const reloadIcon = document.getElementById('reload-password');
 
 generatePassword();
 
@@ -32,6 +33,10 @@ countRange.addEventListener('change', function () {
 copyIcon.addEventListener('click', function () {
 	const copiedPassword = _password.innerHTML;
 	navigator.clipboard.writeText(copiedPassword);
+});
+
+reloadIcon.addEventListener('click', function () {
+	generatePassword();
 });
 
 function generatePassword() {

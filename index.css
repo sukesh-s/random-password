@@ -25,13 +25,16 @@ html body {
 	white-space: nowrap;
 }
 .content-copy {
-	width: 3.5rem;
+	width: 4.5rem;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 .copy-icon {
 	cursor: copy;
+}
+.refresh-icon {
+	cursor: pointer;
 }
 
 input[type='checkbox'] {

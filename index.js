@@ -1,18 +1,53 @@
-// // const pwdgen = require("pwdgen");
-// import pwdgen from "pwdgen";
+import randomPassword from 'https://unpkg.com/random-pwd@1.0.2/bundle.mjs';
 
-// const test = pwdgen(8, { includeLowerCase: true, includeNumbers: true });
-// console.log(test);
-// import pass from "pack";
+let options = {
+	numbers: false,
+	lowerChar: true,
+	upperChar: true,
+	specialChar: true,
+	rangeCount: 8,
+};
 
-// const pass = require("./package/bundle.js");
-// import pass from "package";
-// import pass from "./package/bundle.mjs";
-// import randomPassword from "./package/bundle.js";
-// const pass = require("randompass");
-import pass from "randompass";
-const test = pass(8, {
-  includeLowerCase: true,
-  includeNumbers: true,
+let countRange = document.querySelector('[type="range"]');
+const checkBoxes = document.querySelectorAll('[type="checkbox"]');
+const countLabel = document.getElementById('range-count');
+const countInfo = document.getElementById('count-info');
+const _password = document.getElementById('random-password');
+const copyIcon = document.getElementById('copy-password');
+
+generatePassword();
+
+for (let i = 0; i < checkBoxes.length; i++) {
+	let checkbox = checkBoxes[i];
+	checkbox.addEventListener('click', function () {
+		options[this.id] = this.checked ? true : false;
+		generatePassword();
+	});
+}
+
+countRange.addEventListener('change', function () {
+	options[this.id] = this.value;
+	generatePassword();
 });
-console.log(test);
+copyIcon.addEventListener('click', function () {
+	const copiedPassword = _password.innerHTML;
+	navigator.clipboard.writeText(copiedPassword);
+});
+
+function generatePassword() {
+	const password = randomPassword(options?.rangeCount, {
+		includeNumbers: options?.numbers,
+		includeLowerCase: options?.lowerChar,
+		includeUpperCase: options?.upperChar,
+		includeSpecialChar: options?.specialChar,
+	});
+	for (let i = 0; i < checkBoxes.length; i++) {
+		let checkbox = checkBoxes[i];
+		checkbox.checked = options[checkbox.id];
+	}
+
+	_password.innerHTML = password ? password : '🧞....';
+	countLabel.innerHTML = options?.rangeCount;
+	countInfo.innerHTML = Number(options?.rangeCount) > 1 ? 'Characters' : 'Character';
+	countRange.value = Number(options?.rangeCount);
+}
